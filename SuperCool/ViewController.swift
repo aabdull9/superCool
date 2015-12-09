@@ -10,10 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var coolBg: UIImageView!
+    @IBOutlet weak var coolLogo: UIImageView!
+    @IBOutlet weak var uncoolButton: UIButton!
+    
+    @IBOutlet weak var lameButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -21,5 +27,24 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func makeMeCool(sender: AnyObject) {
+        coolBg.hidden = false
+        coolLogo.hidden = false
+        uncoolButton.hidden = true
+        lameButton.hidden = false
+        
+    }
+    
+    
+    
+    @IBAction func makeMeLame(sender: AnyObject) {
+        
+        coolBg.hidden = true
+        coolLogo.hidden = true
+        uncoolButton.hidden = false
+        lameButton.hidden = true
+        
+        
+    }
 }
 
